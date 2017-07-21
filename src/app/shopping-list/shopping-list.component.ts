@@ -7,6 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShoppingListComponent implements OnInit {
 
+  evens: number[] = [];
+  odds: number[] = [];
+
+  onEvenCreated($event) {
+    this.evens.push($event.counter);
+  }
+
+  onOddCreated($event) {
+    this.odds.push($event.counter);
+  }
+
   constructor() { }
 
   ngOnInit() {
