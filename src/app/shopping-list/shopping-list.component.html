@@ -2,6 +2,7 @@
   <div class="col-xs-12">
     <app-shopping-edit></app-shopping-edit>
     <hr/>
+<!--
     <app-game-control
       (evenCreated)="onEvenCreated($event)"
       (oddCreated)="onOddCreated($event)">
@@ -14,5 +15,13 @@
   </div>
   <div class="col-xs-6">
     <app-even *ngFor="let even of evens" [data]="even"></app-even>
+-->
+    <ul class="list-group">
+      <a *ngFor="let ingredient of ingredients"
+          class="list-group-item"
+          style="cursor: pointer;">
+          {{ ingredient.name }} ({{ ingredient.amount }})
+      </a>
+    </ul>
   </div>
 </div>
